@@ -17,6 +17,8 @@ FROM gcr.io/distroless/static:nonroot
 
 MAINTAINER Zihong Zheng <zihongz@google.com>
 
+RUN make build
+
 ADD bin/ARG_ARCH/ARG_BIN /ARG_BIN
 
 USER nonroot:nonroot
