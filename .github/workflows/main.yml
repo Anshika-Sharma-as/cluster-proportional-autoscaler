@@ -15,5 +15,5 @@ jobs:
     - name: Build the Docker image
       run: |
         echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin docker.io
-        docker build . --file Dockerfile --tag dockerfun23anshika/cluster-proportional-autoscalar-amd64:1.8.3
+        docker build . --tag dockerfun23anshika/cluster-proportional-autoscalar-amd64:1.8.3
         docker push dockerfun23anshika/cluster-proportional-autoscalar-amd64:1.8.3
